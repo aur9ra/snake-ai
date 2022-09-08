@@ -127,6 +127,7 @@ def updategame(dir, colorOnly):
 initgame()
 
 def on_key_down(key):
+
     if key == (keys.UP):
         movement(0)
     if key == (keys.RIGHT):
@@ -140,7 +141,7 @@ def draw():
     screen.fill((0,0,50))
     for i in range(len(positions)):
         currentRow, currentColumn = int(i/gameWidth), i % gameWidth
-        randShade = random.randint(-15,15)
+        randShade = random.randint(-10,10)
         colors[0] = (100+randShade,100+randShade,100+randShade)
         colorToUse = colors.get(game[currentRow][currentColumn])
 
